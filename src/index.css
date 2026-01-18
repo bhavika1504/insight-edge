@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* InsightEdge Design System - Urban Nature Fusion */
+
+@layer base {
+  :root {
+    /* Pastel Yellow Background */
+    --background: 48 100% 96%;
+    --foreground: 150 40% 15%;
+
+    /* White cards with sage tint */
+    --card: 0 0% 100%;
+    --card-foreground: 150 40% 15%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 40% 15%;
+
+    /* Deep Forest Green - Primary */
+    --primary: 150 40% 22%;
+    --primary-foreground: 48 100% 96%;
+
+    /* Light Sage Green - Secondary */
+    --secondary: 90 30% 90%;
+    --secondary-foreground: 150 40% 22%;
+
+    /* Muted Sage */
+    --muted: 90 20% 94%;
+    --muted-foreground: 150 20% 40%;
+
+    /* Olive Green - Accent */
+    --accent: 80 25% 45%;
+    --accent-foreground: 48 100% 96%;
+
+    /* Destructive */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 90 20% 85%;
+    --input: 90 20% 88%;
+    --ring: 150 40% 35%;
+
+    --radius: 1rem;
+
+    /* Custom InsightEdge tokens */
+    --sage: 90 30% 85%;
+    --olive: 80 25% 45%;
+    --forest: 150 40% 22%;
+    --cream: 48 100% 96%;
+    --leaf: 120 35% 50%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(48 100% 96%) 0%, hsl(90 30% 92%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(90 20% 98%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(150 40% 22%) 0%, hsl(120 35% 35%) 100%);
+    --gradient-sage: linear-gradient(180deg, hsl(90 30% 90%) 0%, hsl(90 25% 95%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(150 40% 22% / 0.08);
+    --shadow-card: 0 8px 32px -8px hsl(150 40% 22% / 0.12);
+    --shadow-hover: 0 12px 40px -8px hsl(150 40% 22% / 0.18);
+    --shadow-green: 0 8px 24px -4px hsl(120 35% 50% / 0.2);
+
+    /* Sidebar - using sage theme */
+    --sidebar-background: 90 30% 95%;
+    --sidebar-foreground: 150 40% 22%;
+    --sidebar-primary: 150 40% 22%;
+    --sidebar-primary-foreground: 48 100% 96%;
+    --sidebar-accent: 90 30% 90%;
+    --sidebar-accent-foreground: 150 40% 22%;
+    --sidebar-border: 90 20% 85%;
+    --sidebar-ring: 150 40% 35%;
+  }
+
+  .dark {
+    --background: 150 30% 8%;
+    --foreground: 48 100% 96%;
+    --card: 150 25% 12%;
+    --card-foreground: 48 100% 96%;
+    --popover: 150 25% 12%;
+    --popover-foreground: 48 100% 96%;
+    --primary: 90 40% 60%;
+    --primary-foreground: 150 40% 10%;
+    --secondary: 150 20% 18%;
+    --secondary-foreground: 48 100% 96%;
+    --muted: 150 20% 18%;
+    --muted-foreground: 90 15% 65%;
+    --accent: 80 30% 50%;
+    --accent-foreground: 150 40% 10%;
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 150 20% 20%;
+    --input: 150 20% 20%;
+    --ring: 90 40% 50%;
+    --sidebar-background: 150 25% 10%;
+    --sidebar-foreground: 48 100% 96%;
+    --sidebar-primary: 90 40% 60%;
+    --sidebar-primary-foreground: 150 40% 10%;
+    --sidebar-accent: 150 20% 18%;
+    --sidebar-accent-foreground: 48 100% 96%;
+    --sidebar-border: 150 20% 20%;
+    --sidebar-ring: 90 40% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .card-urban {
+    @apply bg-card rounded-2xl p-6;
+    box-shadow: var(--shadow-card);
+    background: var(--gradient-card);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-urban:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  .btn-forest {
+    @apply px-6 py-3 rounded-xl font-medium text-primary-foreground;
+    background: var(--gradient-cta);
+    box-shadow: var(--shadow-green);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-forest:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px -4px hsl(120 35% 50% / 0.3);
+  }
+
+  .section-sage {
+    background: var(--gradient-sage);
+  }
+
+  .text-gradient-forest {
+    background: linear-gradient(135deg, hsl(150 40% 22%) 0%, hsl(120 35% 35%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
