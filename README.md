@@ -50,21 +50,7 @@ npm install
 
 ### 2. Configure Environment Variables
 Create a `.env` file in the root directory for Firebase and API configuration:
-```env
-# Gemini API Key (for ChatBot)
-GEMINI_API_KEY=AIzaSyCmHHEFcueKK_OTL87MjG-jP_T8YTpEzLs
 
-# Firebase Configuration
-VITE_FIREBASE_API_KEY=AIzaSyBoXQcgKqeLZ2d1S1fwrLClTp2aDArXPzA
-VITE_FIREBASE_AUTH_DOMAIN=insightedge-d10ac.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=insightedge-d10ac
-VITE_FIREBASE_STORAGE_BUCKET=insightedge-d10ac.firebasestorage.app
-VITE_FIREBASE_MESSAGING_SENDER_ID=172755694429
-VITE_FIREBASE_APP_ID=1:172755694429:web:ef2cbca2efc6666d31eeb4
-VITE_FIREBASE_MEASUREMENT_ID=G-9LYT9WZVY6
-
-# NewsAPI Key (for live news)
-VITE_NEWSAPI_KEY=b196ecf403174c82857f0b691c6c119c
 
 ```
 
